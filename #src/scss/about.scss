@@ -1,0 +1,89 @@
+.about {
+  @include adaptiv-value("padding-bottom", 60, 30, 1);
+
+  &__items {
+    min-height: 500px;
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: calc(100vh - 82px);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    width: 100%;
+    max-width: 800px;
+    @extend %m-b;
+    @include adaptiv-value("font-size", 48, 24, 1);
+    @include adaptiv-value("line-height", 59, 30, 1);
+    text-align: center;
+    color: $white;
+  }
+
+  &__text {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 670px;
+    @include adaptiv-value("font-size", 24, 19, 1);
+    line-height: 29px;
+    color: rgba(255, 255, 255, 0.87);
+    @include adaptiv-value("margin-bottom", 50, 20, 1);
+  }
+
+  &__btn {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 20px 40px;
+    color: $white;
+  }
+}
+.swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 39px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.swiper-pagination-bullet {
+  margin: 0 9px;
+  border-radius: 10px;
+  width: 38px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+@media (max-width: 450px) {
+  .about__btn {
+    padding: 13px 25px;
+  }
+  .swiper-pagination-bullet {
+    width: 25px;
+  }
+}
+@media (max-height: 400px) {
+  .about__content {
+    padding-top: 50px;
+    min-height: 500px;
+  }
+}

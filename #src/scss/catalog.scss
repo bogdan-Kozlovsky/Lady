@@ -1,0 +1,67 @@
+.catalog {
+  @include adaptiv-value("padding-top", 30, 20, 1);
+  @include adaptiv-value("padding-bottom", 30, 20, 1);
+  background-color: #e5e5e5;
+  &__title {
+    @include adaptiv-value("margin-bottom", 50, 30, 1);
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    flex: 1 1 20%;
+    margin: 0 15px 30px 15px;
+    border-radius: 10px;
+    padding: 0px 20px 0px 20px;
+    min-height: 385px;
+    box-shadow: 0px 15px 50px rgba(68, 127, 228, 0.15);
+    text-align: center;
+    color: $black;
+    background: #ffffff;
+    @include adaptiv-value("padding-top", 30, 20, 1);
+    @include adaptiv-value("padding-bottom", 45, 20, 1);
+  }
+
+  &__content {
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  &__descr {
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 21px;
+    color: $black;
+  }
+
+  &__img-box {
+    margin: 0 auto 20px;
+    width: 85px;
+    height: 200px;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__price {
+    margin-right: 4px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__price-clossed {
+    margin-right: 24px;
+    text-decoration: line-through;
+    transform: translateY(-10px);
+  }
+}
